@@ -5,3 +5,6 @@ export default {
     QRCode,
     Snapshot
 }
+
+exports.QRCode = QRCode;
+exports.Snapshot = Snapshot;
