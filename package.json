@@ -1,0 +1,18 @@
+{
+    "name": "react-native-qrcode-snapshot",
+    "version": "1.0.0",
+    "description": "react-native中产生二维码和保存快照到相册中",
+    "main": "index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cuo9958/react-native-qrcode-snapshot.git"
+    },
+    "keywords": ["react-native", "qrcode", "snapshot"],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/cuo9958/react-native-qrcode-snapshot/issues"
+    },
+    "homepage": "https://github.com/cuo9958/react-native-qrcode-snapshot#readme"
+}
