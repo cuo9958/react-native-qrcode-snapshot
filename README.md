@@ -1,6 +1,29 @@
 # react-native-qrcode-snapshot
 react-native中产生二维码和保存快照到相册中
 
+## 补充 2018-12-10
+
+快照只适用于ios，如果想在安卓上也支持快照。可以使用`react-native-view-shot`作为安卓的补充。
+
+```javascript
+import { captureRef } from "react-native-view-shot";
+
+snapshot_src = "";
+async snapshot() {
+    if (this.snapshot_src) return this.snapshot_src;
+    if (Platform.OS === "ios") {
+        return this.refs.share.save();
+    } else {
+        this.snapshot_src = captureRef(this.refs.share)
+        return this.snapshot_src;
+    }
+}
+async save() {
+    let img = await this.snapshot();
+    return CameraRoll.saveToCameraRoll(img, "photo");
+}
+```
+
 ## QRCode 
 
 `./lib/QRCode`
