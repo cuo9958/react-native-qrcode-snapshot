@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>react-native-qrcode</title>
+    <script>
+        ! function (o, t) {
+            var i = t.documentElement,
+                n = parseInt(o.devicePixelRatio) || 1;
+
+            function d() {
+                var e = .1 * i.clientWidth;
+                i.style.fontSize = e + "px";
+                var t = parseFloat(i.style.fontSize),
+                    n = parseFloat(o.getComputedStyle(i).fontSize);
+                t !== n && (i.style.fontSize = t * t / n + "px")
+            }! function e() {
+                t.body ? t.body.style.fontSize = 12 * n + "px" : t.addEventListener("DOMContentLoaded", e)
+            }(), d(), o.addEventListener("resize", d), o.addEventListener("pageshow", function (e) {
+                e.persisted && d()
+            })
+        }(window, document)
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="qrcode"></div>
+    <script src="http://img.daling.com/st/topic/qrcode.min.js"></script>
+    <script>
+        function render(value, px) {
+            var w = document.documentElement.style.fontSize.replace("px", "") * 1;
+            w = w * px / 7.5;
+            new QRCode(document.getElementById('qrcode'), {
+                text: value,
+                width: w,
+                height: w,
+                colorDark: '#d0648f',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.M
+            });
+        }
+    </script>
+</body>
+
+</html>
