@@ -38,7 +38,7 @@
     <script>
         function render(value, px) {
             var w = document.documentElement.style.fontSize.replace("px", "") * 1;
-            w = w * px / 7.5;
+            w = w * px / 20;
             new QRCode(document.getElementById('qrcode'), {
                 text: value,
                 width: w,
